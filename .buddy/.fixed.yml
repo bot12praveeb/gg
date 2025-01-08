@@ -1,0 +1,13 @@
+- pipeline: "Pipeline"
+  events:
+  - type: "PUSH"
+    refs:
+    - ":default"
+  - type: "PULL_REQUEST"
+    branches:
+    - "main"
+  - type: "CREATE_REF"
+    refs:
+    - "refs/heads/main"
+  fail_on_prepare_env_warning: true
+  resources: "XLARGE"
